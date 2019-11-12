@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="lab3:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc94683b-707c-4f50-9ae5-e0e236964239" name="Default Changelist" comment="" />
+    <list default="true" id="bc94683b-707c-4f50-9ae5-e0e236964239" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/META-INF/lab3.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/item/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/item/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Carlson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/living/Carlson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Dog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/living/Dog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Mammal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/living/Mammal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/People.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/living/People.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/living/Carlson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/living/Carlson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/living/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/living/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/living/Mammal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/living/Mammal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/living/People.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/living/People.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,11 +33,24 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
   <component name="ProjectId" id="1T7RwXkzsmOdtwUNhSKgbBHAWuD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="lab3" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -65,7 +96,29 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572809386932</updated>
+      <workItem from="1573263033193" duration="154000" />
+      <workItem from="1573503590108" duration="4883000" />
+      <workItem from="1573508729180" duration="1111000" />
+      <workItem from="1573578974995" duration="3428000" />
+      <workItem from="1573583597460" duration="9000" />
+      <workItem from="1573584039184" duration="579000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

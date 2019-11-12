@@ -1,60 +1,59 @@
 package living;
 
-public class Dog extends Mammal{
-    private final int hash;
-// отношение знаком/не знаком определенно этим массивом, в котором номер в масиве соответствует hash объекта
-    private boolean Friend[] = new boolean[10000];
+public class Dog extends Mammal {
 
-    public Dog(Gender gender, String name){
+    private Mammal Friend[] = new Mammal[10000];
+
+    public Dog(Gender gender, String name) {
         super(gender, name);
-        hash = Mammal.getIndeficator() + 1;
-        Mammal.setIndeficator(hash);
     }
 
-    public Dog(Gender gender, String name, int x, int y){
+    public Dog(Gender gender, String name, int x, int y) {
         super(gender, name, x, y);
-        hash = Mammal.getIndeficator() + 1;
-        Mammal.setIndeficator(hash);
+
     }
 
-    public final void AdFriend(Mammal... h){
-        for (Mammal o: h) {
-            Friend[o.hashCode()] = true;
+    public final void AdFriend(Mammal... m) {
+        for (Mammal human : m) {
+            for (int i = 0; i < Friend.length; i++) {
+                if (Friend[i] == null) {
+                    Friend[i] = human;
+                    break;
+                }
+            }
         }
     }
 
-    public final boolean CheckFriend (Mammal h){
-        if (Friend[h.hashCode()] = true){
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-//собака запоминает людей только после того как понюхает
-    public void Sniff(Mammal human){
+    //собака запоминает людей  после того как понюхает
+    public final void Sniff(Mammal human) {
         this.AdFriend(human);
         System.out.println("ГАВ-ГАВ-ГАВ");
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "Dog[кличка=" + this.getName() + ", координата x=" + this.getCoordinateX() + ", координата y=" + this.getCoordinateY() + "]";
     }
 
-//так как каждому объекту в нашей модели соответствует свой hash
     @Override
     public boolean equals (Object o){
-        if (this.hashCode() == o.hashCode()){
+        if (this == o) {
             return true;
         }
-        else {
+
+        if (o == null || this.getClass() != o.getClass()) {
             return false;
         }
+        Dog dog = (Dog) o;
+        return this.getCoordinateX() == dog.getCoordinateX() &&
+                this.getCoordinateY() == dog.getCoordinateY() &&
+                this.getName().equals(dog.getName());
     }
 
     @Override
     public int hashCode(){
-        return this.hash;
+        int result = 7;
+        result = this.getName().hashCode() * 13 + result;
+        return result;
     }
 }

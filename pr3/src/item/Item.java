@@ -2,18 +2,15 @@ package item;
 
 import living.Mammal;
 
-public class Item implements MoveItem{
+public class Item implements MoveItem {
     private int CoordinateX;
     private int CoordinateY;
     private String Name;
-    private final int hash;
 
-    public Item(String name, int x, int y){
+    public Item(String name, int x, int y) {
         this.CoordinateX = x;
         this.CoordinateY = y;
         this.Name = name;
-        hash = Mammal.getIndeficator() + 1;
-        Mammal.setIndeficator(hash);
     }
 
     public int getCoordinateX() {
@@ -29,23 +26,24 @@ public class Item implements MoveItem{
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "Item[название=" + this.getName() + ", координата x=" + this.getCoordinateX() + ", координата y=" + this.getCoordinateY() + "]";
     }
 
-//так как каждому объекту в нашей модели соответствует свой hash
+    //так как каждому объекту в нашей модели соответствует свой hash
     @Override
-    public boolean equals (Object o){
-        if (this.hashCode() == o.hashCode()){
+    public boolean equals(Object o) {
+        if (this.hashCode() == o.hashCode()) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
-
+}
+/*
     @Override
     public final int hashCode(){
         return this.hash;
     }
 }
+*/

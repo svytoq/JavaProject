@@ -12,7 +12,7 @@ public abstract class Mammal implements LivingMove{
     private String Name;
     private int CoordinateX;
     private int CoordinateY;
-    private static int Indeficator = 0;
+
 
     public Mammal(Gender gender, String name){
         this.MyGender = gender;
@@ -168,14 +168,6 @@ public abstract class Mammal implements LivingMove{
 
     public String getName() {
         return this.Name;
-    }
-
-    public static int getIndeficator() {
-        return Indeficator;
-    }
-
-    public static void setIndeficator(int indeficatjr) {
-        Indeficator = indeficatjr;
     }
 
 }
