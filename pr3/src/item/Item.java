@@ -1,7 +1,4 @@
 package item;
-
-import living.Mammal;
-
 public class Item implements MoveItem {
     private int CoordinateX;
     private int CoordinateY;
@@ -30,20 +27,5 @@ public class Item implements MoveItem {
         return "Item[название=" + this.getName() + ", координата x=" + this.getCoordinateX() + ", координата y=" + this.getCoordinateY() + "]";
     }
 
-    //так как каждому объекту в нашей модели соответствует свой hash
-    @Override
-    public boolean equals(Object o) {
-        if (this.hashCode() == o.hashCode()) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+
 }
-/*
-    @Override
-    public final int hashCode(){
-        return this.hash;
-    }
-}
-*/

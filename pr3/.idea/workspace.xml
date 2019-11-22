@@ -7,14 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc94683b-707c-4f50-9ae5-e0e236964239" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/exception/NegativeAgeException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/META-INF/lab3.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/lab3_jar/lab3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/lab3_jar/lab3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/item/Building.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/item/Building.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lab3/item/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/item/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/item/Place.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/item/Place.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Carlson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/living/Carlson.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Dog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/living/Dog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Mammal$Gender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/living/Mammal$Gender.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Mammal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/living/Mammal.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lab3/living/People.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/living/People.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/Building.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/Building.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/Place.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/Place.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/living/Carlson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/living/Carlson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/living/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/living/Dog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/living/Mammal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/living/Mammal.java" afterDir="false" />
@@ -47,6 +55,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -102,6 +111,15 @@
       <workItem from="1573578974995" duration="3428000" />
       <workItem from="1573583597460" duration="9000" />
       <workItem from="1573584039184" duration="579000" />
+      <workItem from="1573677607276" duration="5325000" />
+      <workItem from="1573684716644" duration="1521000" />
+      <workItem from="1573708249405" duration="9263000" />
+      <workItem from="1573848773148" duration="825000" />
+      <workItem from="1573914859230" duration="91000" />
+      <workItem from="1573922481437" duration="173000" />
+      <workItem from="1574096988310" duration="4733000" />
+      <workItem from="1574330170751" duration="347000" />
+      <workItem from="1574428984337" duration="6319000" />
     </task>
     <servers />
   </component>

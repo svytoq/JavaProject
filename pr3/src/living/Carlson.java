@@ -1,30 +1,23 @@
 package living;
 
+import exception.NegativeAgeException;
+import item.MoveItem;
+
 public class Carlson extends Mammal {
 
     private Mammal Friend[] = new Mammal[10000];
     private final String Smel = "jam";
-    private final int hash = 0;
+    private MoveItem myHome;
 
-    public Carlson(Gender gender, String name) {
-        super(gender, name);
+
+    public Carlson(Gender gender, String name, int age)  {
+        super(gender, name, age);
     }
 
-    public Carlson(Gender gender, String name, int x, int y) {
+    public Carlson(Gender gender, String name, int x, int y, MoveItem myHome) {
         super(gender, name, x, y);
+        this.myHome = myHome;
     }
-
-    public final void AdFriend(Mammal... m) {
-        for (Mammal human : m) {
-            for (int i = 0; i < Friend.length; i++) {
-                if (Friend[i] == null) {
-                    Friend[i] = human;
-                    break;
-                }
-            }
-        }
-    }
-
 
     @Override
     public String toString() {
@@ -32,7 +25,14 @@ public class Carlson extends Mammal {
     }
 
     @Override
-    public boolean equals(Object o) {
+    public int hashCode(){
+        int result = 5;
+        result = this.getName().hashCode() * 13 + result;
+        return result;
+    }
+
+    @Override
+    public boolean equals (Object o){
         if (this == o) {
             return true;
         }
@@ -40,16 +40,10 @@ public class Carlson extends Mammal {
         if (o == null || this.getClass() != o.getClass()) {
             return false;
         }
-        Carlson carlson= (Carlson) o;
+        Carlson carlson = (Carlson) o;
         return this.getCoordinateX() == carlson.getCoordinateX() &&
                 this.getCoordinateY() == carlson.getCoordinateY() &&
                 this.getName().equals(carlson.getName());
     }
 
-    @Override
-    public int hashCode() {
-        int result = 7;
-        result = this.getName().hashCode() * 13 + result;
-        return result;
-    }
 }
