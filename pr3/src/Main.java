@@ -78,10 +78,10 @@ public class Main {
 
         Thread.sleep(1000);
         System.out.println("...Малыш был бы счастлив переводить щенка через все перекрестки города. Должно быть, щенок это почувствовал: он бежал вприпрыжку по мостовой, норовя прижаться к ноге Малыша... ");
-        People.Leg LegForMalish = Malish.new Leg(5, "правая нога малыша");
+        People.Leg LegForMalish = Malish.new Leg();
 
         Thread.sleep(1000);
-        DarkPudel.HugLeg(LegForMalish);
+        DarkPudel.HugLeg(Malish);
 
         Thread.sleep(1000);
         Malish.GoTogether(Roadway, Krister, Gunila, DarkPudel);

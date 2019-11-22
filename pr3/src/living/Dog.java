@@ -1,6 +1,7 @@
 package living;
 
 import exception.NegativeAgeException;
+import exception.NoLegsException;
 
 public class Dog extends Mammal {
 
@@ -27,8 +28,15 @@ public class Dog extends Mammal {
         System.out.println("ГАВ-ГАВ-ГАВ");
     }
 
-    public void HugLeg(People.Leg leg){
-        System.out.println(this.getName() + " прижался к " + leg.getName());
+    public void HugLeg(Mammal m){
+        try {
+            if (m.getLeftLeg() == null && m.getRightLeg() == null) {
+                throw new NoLegsException("Нельзя прижаться к ногам, которых нет((");
+            }
+            System.out.println(this.getName() + " прижался к ноге " + m.getName());
+        } catch (NoLegsException e) {
+            System.out.println("Нельзя прижаться к ногам, которых нет((");
+        }
     }
 
     @Override

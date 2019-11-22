@@ -1,8 +1,5 @@
 package living;
 
-
-import exception.NegativeAgeException;
-
 public class People extends Mammal {
 
     private final String Smel = "Sweets";
@@ -26,18 +23,6 @@ public class People extends Mammal {
         new sigh();
     }
 
-    public class Leg{
-        int length;
-        String name;
-        public Leg(int length, String name){
-        this.length = length;
-        this.name = name;
-        }
-
-        public String getName() {
-            return this.name;
-        }
-    };
 
     @Override
     public String toString(){

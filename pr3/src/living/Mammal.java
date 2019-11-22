@@ -13,6 +13,8 @@ public abstract class Mammal implements LivingMove, MoveItem {
     private Mammal Friend[] = new Mammal[10000];
     public enum Gender {MALE, FEMAALE};
 
+    private Mammal.Leg leftLeg;
+    private Mammal.Leg rightLeg;
     private Gender MyGender;
     private String Name;
     private int CoordinateX;
@@ -25,6 +27,8 @@ public abstract class Mammal implements LivingMove, MoveItem {
         this.Name = name;
         this.CoordinateX = 0;
         this.CoordinateY = 0;
+        this.leftLeg = this.new Leg();
+        this.rightLeg = this.new Leg();
         if (age > -1){
             this.age = age;
         }
@@ -33,13 +37,23 @@ public abstract class Mammal implements LivingMove, MoveItem {
         }
     }
 
+
     public Mammal(Gender gender, String name, int x, int y){
         this.MyGender = gender;
         this.Name = name;
         this.CoordinateX = x;
         this.CoordinateY = y;
+        this.leftLeg = this.new Leg();
+        this.rightLeg = this.new Leg();
+
     }
 
+
+    public class Leg {
+        public Leg() {
+
+        }
+    }
 
     public final void AdFriend(Mammal... m) {
         for (Mammal human : m) {
@@ -146,4 +160,11 @@ public abstract class Mammal implements LivingMove, MoveItem {
         return this.Name;
     }
 
+    public Leg getLeftLeg() {
+        return this.leftLeg;
+    }
+
+    public Leg getRightLeg() {
+        return this.rightLeg;
+    }
 }

@@ -7,23 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc94683b-707c-4f50-9ae5-e0e236964239" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/exception/NegativeAgeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exception/NoLegsException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/lab3_jar/lab3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/lab3_jar/lab3.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/item/Building.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/item/Building.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/item/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/item/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/item/Place.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/item/Place.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Carlson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/living/Carlson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Dog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/living/Dog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Mammal$Gender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/living/Mammal$Gender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Mammal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/living/Mammal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/People.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/living/People.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/Building.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/Building.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/Place.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/Place.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/living/Carlson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/living/Carlson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/living/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/living/Dog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/living/Mammal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/living/Mammal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/living/People.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/living/People.java" afterDir="false" />
@@ -120,6 +106,8 @@
       <workItem from="1574096988310" duration="4733000" />
       <workItem from="1574330170751" duration="347000" />
       <workItem from="1574428984337" duration="6319000" />
+      <workItem from="1574437235724" duration="551000" />
+      <workItem from="1574458228421" duration="2283000" />
     </task>
     <servers />
   </component>
