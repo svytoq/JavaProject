@@ -34,6 +34,7 @@ public class Dog extends Mammal {
                 throw new NoLegsException("Нельзя прижаться к ногам, которых нет((");
             }
             System.out.println(this.getName() + " прижался к ноге " + m.getName());
+            this.setMyMood(Mood.HAPPY);
         } catch (NoLegsException e) {
             System.out.println("Нельзя прижаться к ногам, которых нет((");
         }

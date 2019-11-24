@@ -7,10 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc94683b-707c-4f50-9ae5-e0e236964239" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/exception/NoLegsException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/People.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/living/People.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/living/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/living/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/living/Carlson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/living/Carlson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/living/Mammal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/living/Mammal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/living/People.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/living/People.java" afterDir="false" />
     </list>
@@ -40,9 +41,9 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="lab3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -107,7 +108,9 @@
       <workItem from="1574330170751" duration="347000" />
       <workItem from="1574428984337" duration="6319000" />
       <workItem from="1574437235724" duration="551000" />
-      <workItem from="1574458228421" duration="2283000" />
+      <workItem from="1574458228421" duration="2734000" />
+      <workItem from="1574538197893" duration="48000" />
+      <workItem from="1574602519768" duration="5059000" />
     </task>
     <servers />
   </component>

@@ -7,16 +7,14 @@ public class Carlson extends Mammal {
 
     private Mammal Friend[] = new Mammal[10000];
     private final String Smel = "jam";
-    private MoveItem myHome;
 
 
     public Carlson(Gender gender, String name, int age)  {
         super(gender, name, age);
     }
 
-    public Carlson(Gender gender, String name, int x, int y, MoveItem myHome) {
+    public Carlson(Gender gender, String name, int x, int y) {
         super(gender, name, x, y);
-        this.myHome = myHome;
     }
 
     @Override

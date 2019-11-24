@@ -29,8 +29,12 @@ public class People extends Mammal {
         return "People[име=" + this.getName() + ", координата x=" + this.getCoordinateX() + ", координата y=" + this.getCoordinateY() + "]";
     }
 
-    public void talkAboutDog(){
-        System.out.println("ох собака, моя собака, как я хочу собаку");
+//взрослые не любят говроить о всяких глупостях
+    public void talkAbout(Mammal m, Object mammal, String s){
+        if (m.getAge() > 17 && (mammal.getClass() == Carlson.class || mammal.getClass() == Dog.class)){
+            m.setMyMood(Mood.ANGRY);
+        }
+        System.out.println(s);
     }
 
     @Override

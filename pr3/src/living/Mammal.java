@@ -12,7 +12,9 @@ public abstract class Mammal implements LivingMove, MoveItem {
 
     private Mammal Friend[] = new Mammal[10000];
     public enum Gender {MALE, FEMAALE};
+    public enum Mood {HAPPY, ANGRY, TIRED, NORMAL};
 
+    private Mood myMood = Mood.NORMAL;
     private Mammal.Leg leftLeg;
     private Mammal.Leg rightLeg;
     private Gender MyGender;
@@ -20,6 +22,7 @@ public abstract class Mammal implements LivingMove, MoveItem {
     private int CoordinateX;
     private int CoordinateY;
     private int age;
+    private MoveItem myHome;
 
 
     public Mammal(Gender gender, String name, int age)  {
@@ -45,7 +48,6 @@ public abstract class Mammal implements LivingMove, MoveItem {
         this.CoordinateY = y;
         this.leftLeg = this.new Leg();
         this.rightLeg = this.new Leg();
-
     }
 
 
@@ -129,12 +131,14 @@ public abstract class Mammal implements LivingMove, MoveItem {
         }
     }
 
-//все human вместе идут к place (изначально должны иметь одинаковые координаты) рекомендутся сначала вызвать метод ComeHere
+//все human вместе идут к place (изначально должны иметь одинаковые координаты) рекомендутся сначала вызвать метод ComeHere, так как идут вместе - становятся счастливыми
     public final void GoTogether(MoveItem place, Mammal... human) {
         while  (this.CoordinateX != place.getCoordinateX() || this.CoordinateY != place.getCoordinateY()) {
             this.Take2Step(place);
+            this.setMyMood(Mood.HAPPY);
             for (Mammal h : human) {
                 h.Take2Step(place);
+                h.setMyMood(Mood.HAPPY);
             }
         }
         System.out.println("группа подошла к " + place.getName());
@@ -166,5 +170,25 @@ public abstract class Mammal implements LivingMove, MoveItem {
 
     public Leg getRightLeg() {
         return this.rightLeg;
+    }
+
+    public Mood getMyMood() {
+        return this.myMood;
+    }
+
+    public void setMyMood(Mood myMood) {
+        this.myMood = myMood;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public MoveItem getMyHome() {
+        return myHome;
+    }
+
+    public void setMyHome(MoveItem myHome) {
+        this.myHome = myHome;
     }
 }
