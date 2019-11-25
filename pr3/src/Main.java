@@ -1,3 +1,4 @@
+import exception.NoLegsException;
 import item.Building;
 import item.MoveItem;
 import item.Place;
@@ -13,12 +14,31 @@ public class Main {
     public static void main(String[] args) throws InterruptedException{
 
         Building HomeForMalish = new Building("Дом для малыша",10,15);
-
         Place Perecrestok = new Place("Перекрёсток",5, 7);
         Building Skila = new Building("Школа",12,22);
         Building Roadway = new Building("Мостовая",10,15);
-
         Carlson Carlson = new Carlson(Mammal.Gender.MALE,"Карлсон", -100, -100);
+
+        class CompanyForMalish extends People{
+            public CompanyForMalish(Gender gender, String name, int x, int y) {
+                super(gender, name, x, y);
+
+            }
+            //друзья получают удовольствие от совместной прогулки
+            public void GoTogether(MoveItem place, Mammal... human) {
+                while  (this.getCoordinateX() != place.getCoordinateX() || this.getCoordinateY() != place.getCoordinateY()) {
+                    this.Take2Step(place);
+                    this.getMyMood(Mood.HAPPY);
+                    for (Mammal h : human) {
+                        h.Take2Step(place);
+                        h.getMyMood(Mood.HAPPY);
+                    }
+                }
+                System.out.println("группа подошла к " + place.getName());
+            }
+
+        }
+        CompanyForMalish Malish = new CompanyForMalish(Mammal.Gender.MALE,"Малыш", 8,9);
 
         MoveItem Krisha = new MoveItem() {
             @Override
@@ -36,10 +56,11 @@ public class Main {
                 return "Крыша на которой живёт карлсон";
             }
         };
+
         Carlson.setMyHome(Krisha);
 
         Dog DarkPudel = new Dog(Mammal.Gender.FEMAALE, "Черный пудель", 4, 3, Dog.Size.BIG, Dog.Color.BLACK);
-        People Malish = new People(Mammal.Gender.MALE,"Малыш", 8);
+
         People Mama = new People(Mammal.Gender.FEMAALE,"Мама Малыша", 32 );
         Thread.sleep(1000);
 
@@ -53,8 +74,8 @@ public class Main {
         System.out.println("...В тот день Малышу было приятно идти в школу, потому что ему многое надо было обсудить с Кристером и Гуниллой.");
         Malish.Go(Skila);
 
-        People Krister = new People(Mammal.Gender.MALE,"Кристер", 12,22 );
-        People Gunila = new People(Mammal.Gender.FEMAALE,"Гунила", 12,22 );
+        CompanyForMalish Krister = new CompanyForMalish(Mammal.Gender.MALE,"Кристер", 12,22 );
+        CompanyForMalish Gunila = new CompanyForMalish(Mammal.Gender.FEMAALE,"Гунила", 12,22 );
 
         Malish.AdFriend(Malish, Krister, Gunila, Carlson);
         Krister.AdFriend(Malish, Krister, Gunila, Carlson);
@@ -85,7 +106,10 @@ public class Main {
         People.Leg LegForMalish = Malish.new Leg();
 
         Thread.sleep(1000);
-        DarkPudel.HugLeg(Malish);
+        try{ DarkPudel.HugLeg(Malish);}
+        catch (NoLegsException e){
+            System.out.println("Нельзя прижаться к ногам, которых нет((");
+        }
 
         Thread.sleep(1000);
         Malish.GoTogether(Roadway, Krister, Gunila, DarkPudel);

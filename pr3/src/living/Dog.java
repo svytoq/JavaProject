@@ -28,16 +28,19 @@ public class Dog extends Mammal {
         System.out.println("ГАВ-ГАВ-ГАВ");
     }
 
-    public void HugLeg(Mammal m){
-        try {
+    public void HugLeg(Mammal m) throws NoLegsException {
             if (m.getLeftLeg() == null && m.getRightLeg() == null) {
                 throw new NoLegsException("Нельзя прижаться к ногам, которых нет((");
             }
+
             System.out.println(this.getName() + " прижался к ноге " + m.getName());
             this.setMyMood(Mood.HAPPY);
-        } catch (NoLegsException e) {
-            System.out.println("Нельзя прижаться к ногам, которых нет((");
-        }
+            if (m.ChekFriend(this)){
+            m.setMyMood(Mood.HAPPY);
+            }
+            else {
+                m.setMyMood(Mood.ANGRY);
+            }
     }
 
     @Override

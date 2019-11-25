@@ -15,12 +15,7 @@ public class People extends Mammal {
     }
 
     public void sigh(){
-        class sigh{
-            {
-                System.out.println("ах ох ах");
-            }
-        }
-        new sigh();
+        System.out.println("ах ох ах");
     }
 
 
@@ -31,8 +26,11 @@ public class People extends Mammal {
 
 //взрослые не любят говроить о всяких глупостях
     public void talkAbout(Mammal m, Object mammal, String s){
-        if (m.getAge() > 17 && (mammal.getClass() == Carlson.class || mammal.getClass() == Dog.class)){
+        if (m.getAge() > 17 &&  mammal.getClass() == Dog.class){
             m.setMyMood(Mood.ANGRY);
+        }
+        else if (m.getAge() > 17 && mammal.getClass() == Carlson.class){
+            m.setMyMood(Mood.FURIOS);
         }
         System.out.println(s);
     }

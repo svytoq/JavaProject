@@ -12,7 +12,7 @@ public abstract class Mammal implements LivingMove, MoveItem {
 
     private Mammal Friend[] = new Mammal[10000];
     public enum Gender {MALE, FEMAALE};
-    public enum Mood {HAPPY, ANGRY, TIRED, NORMAL};
+    public enum Mood {HAPPY, ANGRY, TIRED, NORMAL, FURIOS};
 
     private Mood myMood = Mood.NORMAL;
     private Mammal.Leg leftLeg;
@@ -131,14 +131,12 @@ public abstract class Mammal implements LivingMove, MoveItem {
         }
     }
 
-//все human вместе идут к place (изначально должны иметь одинаковые координаты) рекомендутся сначала вызвать метод ComeHere, так как идут вместе - становятся счастливыми
-    public final void GoTogether(MoveItem place, Mammal... human) {
+//все human вместе идут к place (изначально должны иметь одинаковые координаты) рекомендутся сначала вызвать метод ComeHere
+    public void GoTogether(MoveItem place, Mammal... human) {
         while  (this.CoordinateX != place.getCoordinateX() || this.CoordinateY != place.getCoordinateY()) {
             this.Take2Step(place);
-            this.setMyMood(Mood.HAPPY);
             for (Mammal h : human) {
                 h.Take2Step(place);
-                h.setMyMood(Mood.HAPPY);
             }
         }
         System.out.println("группа подошла к " + place.getName());
@@ -172,7 +170,7 @@ public abstract class Mammal implements LivingMove, MoveItem {
         return this.rightLeg;
     }
 
-    public Mood getMyMood() {
+    public Mood getMyMood(Mood happy) {
         return this.myMood;
     }
 
@@ -191,4 +189,7 @@ public abstract class Mammal implements LivingMove, MoveItem {
     public void setMyHome(MoveItem myHome) {
         this.myHome = myHome;
     }
+
+
+
 }
