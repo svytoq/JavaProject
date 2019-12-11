@@ -8,15 +8,41 @@
   <component name="ChangeListManager">
     <list default="true" id="bc94683b-707c-4f50-9ae5-e0e236964239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Dog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/living/Dog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Mammal$Mood.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/living/Mammal$Mood.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/People.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/living/People.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/living/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/living/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/living/Mammal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/living/Mammal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/living/People.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/living/People.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/lab3_jar/lab3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/lab3_jar/lab3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/Main$1CompanyForMalish.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/exception/NegativeAgeException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/exception/NoLegsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/item/Building$Roof.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/item/Building.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/item/Item.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/item/MoveItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/item/Place.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Carlson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Dog$Color.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Dog$Size.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Dog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/LivingMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Mammal$Gender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Mammal$Leg.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Mammal$Mood.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Mammal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/People.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exception/NegativeAgeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/exception/NegativeAgeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exception/NoLegsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/exception/NoLegsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/Building.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/item/Building.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/MoveItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/item/MoveItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/Place.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/item/Place.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/living/Carlson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/living/Carlson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/living/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/living/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/living/LivingMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/living/Moving.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/living/Mammal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/living/Mammal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/living/People.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/living/Human.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,10 +72,10 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -63,9 +89,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="laba4.Main" />
+      <module name="lab3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="laba4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="laba4.item.Main" />
       <module name="lab3" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -117,6 +156,14 @@
       <workItem from="1574621865320" duration="4041000" />
       <workItem from="1574687854155" duration="10451000" />
       <workItem from="1574714556283" duration="2510000" />
+      <workItem from="1574878620766" duration="2780000" />
+      <workItem from="1574883078963" duration="714000" />
+      <workItem from="1574919035764" duration="7629000" />
+      <workItem from="1574970363905" duration="33000" />
+      <workItem from="1575231515292" duration="95000" />
+      <workItem from="1575908655648" duration="5000" />
+      <workItem from="1575969581544" duration="3622000" />
+      <workItem from="1576090969139" duration="4284000" />
     </task>
     <servers />
   </component>
