@@ -8,43 +8,12 @@
   <component name="ChangeListManager">
     <list default="true" id="bc94683b-707c-4f50-9ae5-e0e236964239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/lab3_jar/lab3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/lab3_jar/lab3.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/Main$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/Main$1CompanyForMalish.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/exception/NegativeAgeException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/exception/NoLegsException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/item/Building$Roof.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/item/Building.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/item/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/item/MoveItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/item/Place.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Carlson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Dog$Color.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Dog$Size.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Dog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/LivingMove.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Mammal$Gender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Mammal$Leg.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Mammal$Mood.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/Mammal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab3/living/People.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exception/NegativeAgeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/exception/NegativeAgeException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exception/NoLegsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/exception/NoLegsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/Building.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/item/Building.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/item/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/MoveItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/item/MoveItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/Place.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/item/Place.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/living/Carlson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/living/Carlson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/living/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/living/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/living/LivingMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/living/Moving.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/living/Mammal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/living/Mammal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/living/People.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/living/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/laba4/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/laba4/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab3/laba4/living/Mammal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab3/laba4/living/Mammal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/laba4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/laba4/living/Mammal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/laba4/living/Mammal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/laba4/living/qq.java" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +32,11 @@
   </component>
   <component name="ProjectId" id="1T7RwXkzsmOdtwUNhSKgbBHAWuD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
@@ -76,18 +50,6 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" nameIsGenerated="true">
@@ -164,6 +126,17 @@
       <workItem from="1575908655648" duration="5000" />
       <workItem from="1575969581544" duration="3622000" />
       <workItem from="1576090969139" duration="4284000" />
+      <workItem from="1576097431344" duration="1996000" />
+      <workItem from="1576127251535" duration="2027000" />
+      <workItem from="1576132370789" duration="2675000" />
+      <workItem from="1576248981638" duration="93000" />
+      <workItem from="1576871788243" duration="390000" />
+      <workItem from="1577184636839" duration="596000" />
+      <workItem from="1577275550529" duration="91000" />
+      <workItem from="1580407210421" duration="105000" />
+      <workItem from="1580407685539" duration="52000" />
+      <workItem from="1580496065153" duration="848000" />
+      <workItem from="1581265770077" duration="4352000" />
     </task>
     <servers />
   </component>
@@ -182,5 +155,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="91" y="0" key="new project wizard" timestamp="1581265827943">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="91" y="0" key="new project wizard/0.0.1280.720@0.0.1280.720" timestamp="1581265827943" />
   </component>
 </project>

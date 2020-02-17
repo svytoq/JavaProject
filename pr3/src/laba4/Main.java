@@ -40,7 +40,7 @@ public class Main {
             }
 
         }
-        CompanyForMalish malish = new CompanyForMalish(Mammal.Gender.MALE,"Малыш", 8,9);
+        Human malish = new Human(Mammal.Gender.MALE,"Малыш", 8,9);
 
         MoveItem krisha = new MoveItem() {
             @Override

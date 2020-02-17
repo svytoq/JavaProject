@@ -200,14 +200,15 @@ public abstract class Mammal implements Moving, MoveItem {
 
                 if(annotation.value() != null) {
                     field.setAccessible(true);
-                    if (field.getType().getName().equals("string")) {
-                        field.set(obj, annotation.value());
+                    if (field.getType().getName().equals("int")) {
+                        field.set(obj, Integer.parseInt(annotation.value()));
                     }
                     else if(field.getType().getName().equals("double")){
                         field.set(obj, Double.parseDouble(annotation.value()));
                     }
+                    //else if......
                     else {
-                        field.set(obj, Integer.parseInt(annotation.value()));
+                        field.set(obj, annotation.value());
                     }
                 }
                 else if (field.getType().getName().equals("double")){
