@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Invoker {
-    Scanner scanner = new Scanner(System.in);
     Command help;
     Command info;
     Command show;
@@ -47,7 +46,8 @@ public class Invoker {
 
 
 
-    public void start() throws IOException {
+    public void start() {
+        Scanner scanner = new Scanner(System.in);
         while (true){
             String s = scanner.nextLine();
             String[] words = s.split("\\s");

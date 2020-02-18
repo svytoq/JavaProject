@@ -5,5 +5,5 @@ import lab5.classtosave.UserNotReadException;
 import java.io.IOException;
 
 public interface Command {
-    public void execute(String[] t) throws IOException;
+    public void execute(String[] t);
 }

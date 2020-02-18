@@ -1,5 +1,17 @@
+show
+help
 info
-show
-clear
-show
 history
+add
+3
+3
+3
+3
+
+MELTAGUN
+
+2452
+show
+save
+executeScript src/main/java/lab5/script
+exit

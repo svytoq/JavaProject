@@ -11,7 +11,7 @@ import java.io.IOException;
 
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
         //SpaceMarine testObject = new SpaceMarine("submarine", new Coordinates(5, 5f), 5, AstartesCategory.AGGRESSOR, Weapon.BOLTGUN, MeleeWeapon.CHAIN_AXE, new Chapter("sub", 10l));
         Reciver server = new Reciver();
         server.load("src/main/java/lab5/file");
@@ -22,15 +22,6 @@ public class Main {
                 new FilterContainsNameCommand(server), new PrintFieldAscendingChapterCommand(server));
         user.start();
 
-    }
-    private static void jacksonXmlExample(SpaceMarine testClass) throws IOException {
-        System.out.println("Test XML serialization with jackson");
-        XmlMapper mapper = new XmlMapper();
-        mapper.registerModule(new JavaTimeModule()).disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS).disable(DeserializationFeature.ADJUST_DATES_TO_CONTEXT_TIME_ZONE);
-        String serialized = mapper.writeValueAsString(testClass);
-        System.out.println("XML value: " + serialized);
-        SpaceMarine deserialized = mapper.readValue(serialized, SpaceMarine.class);
-        System.out.println("Deserialized value: " + deserialized);
     }
 }
 

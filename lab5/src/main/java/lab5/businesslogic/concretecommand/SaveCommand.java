@@ -3,8 +3,6 @@ package lab5.businesslogic.concretecommand;
 import lab5.businesslogic.Command;
 import lab5.businesslogic.Reciver;
 
-import java.io.IOException;
-
 public class SaveCommand implements Command {
     Reciver reciver;
 
@@ -12,7 +10,7 @@ public class SaveCommand implements Command {
         this.reciver = reciver;
     }
     @Override
-    public void execute(String[] t) throws IOException {
+    public void execute(String[] t)  {
         reciver.save(t);
     }
 }

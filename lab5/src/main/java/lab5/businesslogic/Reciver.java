@@ -12,35 +12,45 @@ import java.lang.reflect.Type;
 import java.util.*;
 
 public class Reciver {
-    Scanner scanner = new Scanner(System.in);
+    Boolean script = false;
     Queue<SpaceMarine> queue = new PriorityQueue<>();
     private Stack<String> commandHistory = new Stack<>();
 
-    public void load(String nameFile) throws IOException {
-        File file = new File(nameFile);
-        BufferedReader fileReader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
-        String result = "";
-        String line;
+    public void load(String nameFile) {
+        try {
+            File file = new File(nameFile);
+            BufferedReader fileReader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
+            String result = "";
+            String line;
 
-        while ((line = fileReader.readLine())!= null) {
-            result = result+line;
+            while ((line = fileReader.readLine())!= null) {
+                result = result+line;
+            }
+
+            TypeReference<LinkedList<SpaceMarine>> typeSpaceMarine = new TypeReference<LinkedList<SpaceMarine>>() {
+                @Override
+                public Type getType() {
+                     return super.getType();
+                }
+            };
+
+            LinkedList<SpaceMarine> fromXML = parse().readValue(result.toString(), typeSpaceMarine);
+
+            queue.addAll(fromXML);
+
+            fileReader.close();
+            long t = 1;
+            for (SpaceMarine spaceMarine : queue){
+                t = Math.max(t,spaceMarine.getId());
+            }
+            SpaceMarine.setClassId(t+1);
+        }catch (Exception e){
+            System.out.println("файла не существует или к нему отсутсвует доступ");
         }
 
-        TypeReference<LinkedList<SpaceMarine>> typeSpaceMarine = new TypeReference<LinkedList<SpaceMarine>>() {
-            @Override
-            public Type getType() {
-                return super.getType();
-            }
-        };
-
-        LinkedList<SpaceMarine> fromXML = parse().readValue(result.toString(), typeSpaceMarine);
-
-        queue.addAll(fromXML);
-
-        fileReader.close();
     }
 
-    private XmlMapper parse(){
+    public XmlMapper parse(){
         XmlMapper mapper = new XmlMapper();
         mapper.registerModule(new JavaTimeModule())
                 .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
@@ -48,7 +58,7 @@ public class Reciver {
         return mapper;
     }
 
-    public SpaceMarine createSpaceMarine(){
+    public SpaceMarine createSpaceMarine(Scanner scanner){
         boolean flag;
         String line;
         String name = null;
@@ -102,14 +112,23 @@ public class Reciver {
         }
 
         AstartesCategory category = null;
-        do{
-            System.out.println("Введите AstartesCategory, варианты для ввода:AGGRESSOR, TACTICAL, TERMINATOR, LIBRARIAN, APOTHECARY, обратите внимание, что нужно использовать заглавные буквы");
+        do{ flag = false;
+            System.out.println("Введите AstartesCategory, варианты для ввода:AGGRESSOR, TACTICAL, TERMINATOR, LIBRARIAN, APOTHECARY, обратите внимание, что нужно использовать заглавные буквы, если не хотите инициализировать поле - нажмите Enter");
             try {
-                category = AstartesCategory.valueOf(scanner.nextLine());
+                String t = scanner.nextLine();
+                if (t.equals("")){
+                    flag = true;
+                }else{
+                    category = AstartesCategory.valueOf(t);
+                    flag = true;
+                }
             }catch ( IllegalArgumentException e){
 
             }
-        }while (category == null);
+            if (flag){
+                break;
+            }
+        }while (true);
 
         Weapon weaponType = null;
         do{
@@ -122,38 +141,55 @@ public class Reciver {
         }while (weaponType == null);
 
         MeleeWeapon meleeWeapon = null;
-        do{
-            System.out.println("Введите meleeWeapon, варианты для ввода:CHAIN_AXE, MANREAPER, POWER_BLADE, обратите внимание, что нужно использовать заглавные буквы");
-            try {
-                meleeWeapon = MeleeWeapon.valueOf(scanner.nextLine());
+        do{flag = false;
+            System.out.println("Введите meleeWeapon, варианты для ввода:CHAIN_AXE, MANREAPER, POWER_BLADE, обратите внимание, что нужно использовать заглавные буквы, если не хотите инициализировать поле - нажмите Enter");
+            try { String t = scanner.nextLine();
+                if (t.equals("")){
+                    flag = true;
+                }else{
+                    meleeWeapon = MeleeWeapon.valueOf(t);
+                    flag = true;
+                }
             }catch ( IllegalArgumentException e){
 
             }
-        }while (meleeWeapon == null);
-
-        String chapterName;
-        do {
-            System.out.println("Введите chapterName, оно должно содержать хотя бы 1 знак");
-            chapterName = scanner.nextLine();
-        }while (chapterName == null || chapterName.equals("") );
-
-        Long marinesCount = null;
-        while (true) {
-            flag = true;
-            System.out.println("Введите marinesCount, оно должно быть натуральным числом меньшим 1001");
-            try {
-                line = scanner.nextLine();
-                marinesCount = Long.parseLong(line);
-            } catch (NumberFormatException e) {
-                flag = false;
-            }
-            if (flag && marinesCount > 0 && marinesCount < 1001) {
+            if (flag){
                 break;
             }
-        }
-        return new SpaceMarine(name, new Coordinates(coordinateX, coordinateY), health, category, weaponType, meleeWeapon, new Chapter(chapterName, marinesCount));
+        }while (true);
+
+        System.out.println("нажмите Enter, усли хотите инициализировать поле Chapter, иначе введите любую последовательность символов");
+        String t = scanner.nextLine();
+        String chapterName = null;
+        Long marinesCount = null;
+        Chapter chapter = null;
+         if (!t.equals("")){
+
+         }else{
+             do {
+                 System.out.println("Введите chapterName, оно должно содержать хотя бы 1 знак");
+                 chapterName = scanner.nextLine();
+             }while (chapterName == null || chapterName.equals("") );
+
+             while (true) {
+                 flag = true;
+                 System.out.println("Введите marinesCount, оно должно быть натуральным числом меньшим 1001");
+                 try {
+                     line = scanner.nextLine();
+                     marinesCount = Long.parseLong(line);
+                 } catch (NumberFormatException e) {
+                     flag = false;
+                 }
+                 if (flag && marinesCount > 0 && marinesCount < 1001) {
+                     break;
+                 }
+             }
+             chapter = new Chapter(chapterName, marinesCount);
+         }
+
+        return new SpaceMarine(name, new Coordinates(coordinateX, coordinateY), health, category, weaponType, meleeWeapon, chapter);
     }
-    public boolean searchId(int i){
+    public boolean searchId(long i){
         boolean flag = false;
         for (SpaceMarine c : queue) {
             if (c.getId() == i) {
@@ -164,7 +200,7 @@ public class Reciver {
         return flag;
     }
 
-    public SpaceMarine searchById(int i) throws UserNotReadException {
+    public SpaceMarine searchById(long i) throws UserNotReadException {
         boolean flag = false;
         SpaceMarine s = null;
         for (SpaceMarine c : queue){
@@ -184,158 +220,63 @@ public class Reciver {
 
     public void help(String[] t){
         System.out.println("help : вывести справку по доступным командам\n" +
-                "info : вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)\n" +
+                "info : вывести в стандартный поток вывода информацию о коллекции\n" +
                 "show : вывести в стандартный поток вывода все элементы коллекции в строковом представлении\n" +
-                "add {element} : добавить новый элемент в коллекцию\n" +
-                "update id {element} : обновить значение элемента коллекции, id которого равен заданному\n" +
-                "remove_by_id id : удалить элемент из коллекции по его id\n" +
+                "add : добавить новый элемент в коллекцию\n" +
+                "update id  : обновить значение элемента коллекции, id которого равен заданному\n" +
+                "removeById id : удалить элемент из коллекции по его id\n" +
                 "clear : очистить коллекцию\n" +
                 "save : сохранить коллекцию в файл\n" +
-                "execute_script file_name : считать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.\n" +
+                "executeScript file: считать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.\n" +
                 "exit : завершить программу (без сохранения в файл)\n" +
-                "remove_head : вывести первый элемент коллекции и удалить его\n" +
-                "remove_greater {element} : удалить из коллекции все элементы, превышающие заданный\n" +
+                "removeHead : вывести первый элемент коллекции и удалить его\n" +
+                "removeGreater {element} : удалить из коллекции все элементы, превышающие заданный\n" +
                 "history : вывести последние 15 команд (без их аргументов)\n" +
-                "max_by_chapter : вывести любой объект из коллекции, значение поля chapter которого является максимальным\n" +
-                "filter_contains_name name : вывести элементы, значение поля name которых содержит заданную подстроку\n" +
-                "print_field_ascending_chapter chapter : вывести значения поля chapter в порядке возрастания");
+                "maxByChapter : вывести любой объект из коллекции, значение поля chapter которого является максимальным\n" +
+                "filterContainsName name : вывести элементы, значение поля name которых содержит заданную подстроку\n" +
+                "printFieldAscendingChapter chapter : вывести значения поля chapter в порядке возрастания");
         commandHistory.push("help");
-    };
+    }
 
     public void info(String[] t){
         System.out.println("размер коллекции: " + queue.size() + ", тип коллекции:" + queue.getClass());
         commandHistory.push("info");
-    };
+    }
 
     public void show(String[] t){
+        if(queue.isEmpty()){
+            System.out.println("в коллекции еще нету элементов");
+        }
         for (SpaceMarine c : queue){
             System.out.println(c.toString());
         }
         commandHistory.push("show");
-    };
+    }
 
 
     public void add(String[] t)  {
-        queue.add(createSpaceMarine());
+        queue.add(createSpaceMarine(new Scanner(System.in)));
         System.out.println("Новый обьект добавлен в коллекцию");
         commandHistory.push("add");
     };
 
     public void updateId(String[] t) {
         Boolean flag1 = true;
-        int id = 0;
+        Long id = 0l;
         try {
-            id = Integer.parseInt(t[1]);
+            id = Long.parseLong(t[1]);
         } catch (IllegalArgumentException e) {
             System.out.println("аргумент команды updateId должен быть натуральным числом");
             flag1 = false;
         }
         if (flag1 && searchId(id)) {
-            boolean flag;
-            String line;
-            String name = null;
-            while ((name == null) || (name.equals(""))) {
-                System.out.println("Введите имя объекта, оно должно содержать хотя бы 1 знак");
-                name = scanner.nextLine();
-            }
 
-            Integer coordinateX = 109;
-            while (true) {
-                flag = true;
-                System.out.println("Введите координату X, она должна быть целым числом меньшим 109");
-                try {
-                    line = scanner.nextLine();
-                    coordinateX = Integer.parseInt(line);
-                } catch (NumberFormatException e) {
-                    flag = false;
-                }
-                if (flag && coordinateX <= 108) {
-                    break;
-                }
-            }
-
-            Float coordinateY = null;
-            while (true) {
-                flag = true;
-                System.out.println("Введите координату Y, она должна быть вещественным числом, дробную часть записывайте через запятую");
-                try {
-                    line = scanner.nextLine();
-                    coordinateY = Float.parseFloat(line);
-                } catch (NumberFormatException e) {
-                    flag = false;
-                }
-                if (flag) {
-                    break;
-                }
-            }
-
-            int health = 0;
-            while (true) {
-                flag = true;
-                System.out.println("Введите очки здоровья, они должни быть натуральным числом");
-                try {
-                    line = scanner.nextLine();
-                    health = Integer.parseInt(line);
-                } catch (NumberFormatException e) {
-                    flag = false;
-                }
-                if (flag && health >= 1) {
-                    break;
-                }
-            }
-
-            AstartesCategory category = null;
-            do {
-                System.out.println("Введите AstartesCategory, варианты для ввода:AGGRESSOR, TACTICAL, TERMINATOR, LIBRARIAN, APOTHECARY, обратите внимание, что нужно использовать заглавные буквы");
-                try {
-                    category = AstartesCategory.valueOf(scanner.nextLine());
-                } catch (IllegalArgumentException e) {
-
-                }
-            } while (category == null);
-
-            Weapon weaponType = null;
-            do {
-                System.out.println("Введите тип оружия, варианты для ввода:BOLTGUN, MELTAGUN, HEAVY_FLAMER, обратите внимание, что нужно использовать заглавные буквы");
-                try {
-                    weaponType = Weapon.valueOf(scanner.nextLine());
-                } catch (IllegalArgumentException e) {
-
-                }
-            } while (weaponType == null);
-
-            MeleeWeapon meleeWeapon = null;
-            do {
-                System.out.println("Введите meleeWeapon, варианты для ввода:CHAIN_AXE, MANREAPER, POWER_BLADE, обратите внимание, что нужно использовать заглавные буквы");
-                try {
-                    meleeWeapon = MeleeWeapon.valueOf(scanner.nextLine());
-                } catch (IllegalArgumentException e) {
-
-                }
-            } while (meleeWeapon == null);
-
-            String chapterName;
-            do {
-                System.out.println("Введите chapterName, оно должно содержать хотя бы 1 знак");
-                chapterName = scanner.nextLine();
-            } while (chapterName == null || chapterName.equals(""));
-
-            Long marinesCount = null;
-            while (true) {
-                flag = true;
-                System.out.println("Введите marinesCount, оно должно быть натуральным числом меньшим 1001");
-                try {
-                    line = scanner.nextLine();
-                    marinesCount = Long.parseLong(line);
-                } catch (NumberFormatException e) {
-                    flag = false;
-                }
-                if (flag && marinesCount > 0 && marinesCount < 1001) {
-                    break;
-                }
-            }
             try {
-                searchById(id).update(name, new Coordinates(coordinateX, coordinateY), health, category, weaponType, meleeWeapon, new Chapter(chapterName, marinesCount));
+                queue.remove(searchById(id));
+                SpaceMarine spaceMarine = createSpaceMarine(new Scanner(System.in));
+                spaceMarine.setId(id);
+                queue.add(spaceMarine);
+                SpaceMarine.setClassId(SpaceMarine.getClassId()-1);
                 System.out.println("Значения элемента обновлены");
             } catch (UserNotReadException e) {
                 System.out.println("Нету элемента с таким id");
@@ -379,7 +320,7 @@ public class Reciver {
         commandHistory.push("clear");
     }
 
-    public void save(String[] t) throws IOException {
+    public void save(String[] t)  {
         File file = new File("src/main/java/lab5/file");
 
         try {
@@ -397,10 +338,17 @@ public class Reciver {
         } catch (SecurityException ex){
             System.out.println("Это директория, укажите файл");
         }
+        try {
+            BufferedWriter fileWriter = new BufferedWriter(new FileWriter(file));
+            fileWriter.write(parse().writeValueAsString(queue));
+            fileWriter.close();
+            System.out.println("коллекция успешно сохранена");
+        }catch (IOException e){
+            System.out.println("Такого файла не сушествует");
 
-        BufferedWriter fileWriter = new BufferedWriter(new FileWriter(file));
-        fileWriter.write(parse().writeValueAsString(queue));
-        fileWriter.close();
+        }
+
+        commandHistory.push("save");
     }
 
     public void executeScript(String[] t) {
@@ -408,138 +356,133 @@ public class Reciver {
             File file = new File(t[1]);
             FileReader fileReader = new FileReader(file);
             OutputStreamWriter ops = new OutputStreamWriter(System.out);
-            Scanner scan = new Scanner(fileReader);
-            while (scan.hasNextLine()){
-                String line = scan.nextLine();
-                String[] words = line.split("\\s");
-                switch (words[0]){
+            Scanner scanner = new Scanner(fileReader);
+            while (scanner.hasNextLine()) {
+                String s = scanner.nextLine();
+                String[] words = s.split("\\s");
+                switch (words[0]) {
+
                     case "help":
-                        if (words.length == 1){
+                        if (words.length == 1) {
                             help(words);
-                        }else {
+                        } else {
                             System.out.println("у команды help не должно быть аргументов");
                         }
                         break;
 
                     case "info":
-                        if (words.length == 1){
+                        if (words.length == 1) {
                             info(words);
-                        }else {
+                        } else {
                             System.out.println("у команды info не должно быть аргументов");
                         }
                         break;
 
                     case "show":
-                        if (words.length == 1){
+                        if (words.length == 1) {
                             show(words);
-                        }else {
+                        } else {
                             System.out.println("у команды show не должно быть аргументов");
                         }
                         break;
 
                     case "add":
-                        if (words.length == 1){
-                            add(words);
-                        }else {
+                        if (words.length == 1) {
+                            addForScript(scanner);
+                        } else {
                             System.out.println("у команды add не должно быть аргументов");
                         }
                         break;
 
                     case "updateId":
-                        if (words.length == 2){
+                        if (words.length == 2) {
                             updateId(words);
-                        }
-                        else{
+                        } else {
                             System.out.println("аргумент команды updateId должен быть натуральным числом, причем он должен быть только один");
                         }
                         break;
 
                     case "removeById":
-                        if (words.length == 2){
+                        if (words.length == 2) {
                             removeById(words);
-                        }
-                        else{
+                        } else {
                             System.out.println("аргумент команды removeById должен быть натуральным числом, причем он должен быть только один");
                         }
                         break;
 
                     case "clear":
-                        if (words.length == 1){
+                        if (words.length == 1) {
                             clear(words);
-                        }else {
+                        } else {
                             System.out.println("у команды не должно быть аргументов");
                         }
                         break;
 
                     case "save":
-                        if (words.length == 1){
+                        if (words.length == 1) {
                             save(words);
-                        }else {
+                        } else {
                             System.out.println("у команды не должно быть аргументов");
                         }
                         break;
 
                     case "executeScript":
-                        if (words.length == 2){
-                            executeScript(words);
-                        }else {
-                            System.out.println("у команды должен быть аргумент, причем только один");
-                        }
+                        System.out.println("скрипт из скрипта к сожалению не вызвать, иначе это может привести к рекурсивному вызову и переполнению памяти");
                         break;
 
                     case "exit":
-                        if (words.length == 1){
+                        if (words.length == 1) {
                             exit(words);
-                        }else {
+                        } else {
                             System.out.println("у команды не должно быть аргументов");
                         }
                         break;
 
                     case "removeHead":
-                        if (words.length == 1){
+                        if (words.length == 1) {
                             removeHead(words);
-                        }else {
+                        } else {
                             System.out.println("у команды не должно быть аргументов");
                         }
                         break;
 
                     case "removeGreater":
-                        if (words.length == 1){
+                        if (words.length == 1) {
                             removeGreater(words);
-                        }else {
+                        } else {
                             System.out.println("у команды не должно быть аргументов");
                         }
                         break;
 
                     case "history":
-                        if(words.length == 1){
+                        if (words.length == 1) {
                             history(words);
-                        }else {
+                        } else {
                             System.out.println("у команды не должно быть аргументов");
                         }
                         break;
 
                     case "maxByChapter":
-                        if(words.length == 1){
+                        if (words.length == 1) {
                             maxByChapter(words);
-                        }else {
+                        } else {
                             System.out.println("у команды не должно быть аргумента");
                         }
                         break;
 
                     case "filterContainsName":
-                        if (words.length == 2){
+                        if (words.length == 2) {
                             filterContainsName(words);
-                        }else {
+                        } else {
                             System.out.println("у команды должен быть аргумент, причем только один");
                         }
                         break;
 
                     case "printFieldAscendingChapter":
-                        if (words.length == 1){
+                        if (words.length == 1) {
                             printFieldAscendingChapter(words);
 
-                        }else {
+                        } else {
                             System.out.println("у команды не должно быть аргумента");
                         }
                         break;
@@ -548,13 +491,13 @@ public class Reciver {
                         System.out.println("вы ввели хуйню, для справки введите команду help");
                 }
             }
-        }catch (FileNotFoundException e){
+        }catch(FileNotFoundException e){
             System.out.println("файл не найден");
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            System.out.println("неправильный формат скрипта");;
         }
+        commandHistory.push("executeScript");
     }
-
     public void exit(String[] t){
         System.out.println("Программа заверщилась корректно");
         System.exit(0);
@@ -571,7 +514,7 @@ public class Reciver {
     }
 
     public void removeGreater(String[] t){
-        SpaceMarine spaceMarine = createSpaceMarine();
+        SpaceMarine spaceMarine = createSpaceMarine(new Scanner(System.in));
         for (SpaceMarine s : queue){
             if (spaceMarine.getHealth() < s.getHealth()){
                 System.out.println(s.toString() + "удалён из коллекции");
@@ -632,17 +575,17 @@ public class Reciver {
         for(SpaceMarine spaceMarine : queue){
             list.add(spaceMarine.getChapter().getMarinesCount());
         }
-        Collections.sort(list, new Comparator<Long>() {
-            @Override
-            public int compare(Long o1, Long o2) {
-                return(int) (o1 -o2);
-            }
-        });
+        Collections.sort(list, (o1, o2) -> (int) (o1 -o2));
         for (Long l : list){
             System.out.println(l);
         }
         commandHistory.push("printFieldAscendingChapter");
     }
 
+    public void addForScript(Scanner scanner){
+        queue.add(createSpaceMarine(scanner));
+        System.out.println("Новый обьект добавлен в коллекцию");
+        commandHistory.push("add");
+    }
 }
 
