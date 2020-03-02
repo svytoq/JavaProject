@@ -1,5 +1,6 @@
 package lab5.classtosave;
 
+//TODO: equals/hashCode
 public class Coordinates {
     private Integer x; //Максимальное значение поля: 108, Поле не может быть null
     private Float y; //Поле не может быть null

@@ -1,1 +1,1 @@
-<PriorityQueue><item><id>2</id><name>3</name><coordinates><x>3</x><y>3.0</y></coordinates><creationDate>2020-02-18T19:38:33.899+0000</creationDate><health>3</health><category/><weaponType>MELTAGUN</weaponType><meleeWeapon/><chapter/></item><item><id>3</id><name>3</name><coordinates><x>3</x><y>3.0</y></coordinates><creationDate>2020-02-18T19:50:06.558+0000</creationDate><health>3</health><category/><weaponType>MELTAGUN</weaponType><meleeWeapon/><chapter/></item></PriorityQueue>
+<PriorityQueue/>

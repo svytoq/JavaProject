@@ -1,6 +1,6 @@
 package lab5.classtosave;
 
-import java.time.ZonedDateTime;
+
 import java.util.Date;
 
 public class SpaceMarine implements Comparable<SpaceMarine> {
@@ -51,10 +51,11 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
 
     @Override
     public int compareTo(SpaceMarine o) {
-        return(int) (id - o.getId());
+        return(int) (health - o.getHealth());
     }
 
     @Override
+    //TODO: все поля
     public String toString() {
         return "SpaceMarine{" +
                 "id=" + id +

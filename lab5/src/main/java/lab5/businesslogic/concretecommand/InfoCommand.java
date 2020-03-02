@@ -1,11 +1,13 @@
 package lab5.businesslogic.concretecommand;
 
+import lab5.businesslogic.CollectionManager;
 import lab5.businesslogic.Command;
+import lab5.businesslogic.Manager;
 import lab5.businesslogic.Reciver;
 
 public class InfoCommand  implements Command {
-    Reciver reciver;
-    public InfoCommand(Reciver reciver){
+    CollectionManager reciver;
+    public InfoCommand(CollectionManager reciver){
         this.reciver = reciver;
     }
     @Override

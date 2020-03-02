@@ -1,6 +1,7 @@
 package lab5.businesslogic.concretecommand;
 
 import lab5.businesslogic.Command;
+import lab5.businesslogic.Manager;
 import lab5.businesslogic.Reciver;
 
 public class ExitCommand implements Command {

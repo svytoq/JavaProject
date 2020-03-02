@@ -1,12 +1,14 @@
 package lab5.businesslogic.concretecommand;
 
+import lab5.businesslogic.CollectionManager;
 import lab5.businesslogic.Command;
+import lab5.businesslogic.Manager;
 import lab5.businesslogic.Reciver;
 
 public class RemoveByIdCommand implements Command {
-    Reciver reciver;
+    CollectionManager reciver;
 
-    public RemoveByIdCommand(Reciver reciver){
+    public RemoveByIdCommand(CollectionManager reciver){
         this.reciver = reciver;
     }
     @Override

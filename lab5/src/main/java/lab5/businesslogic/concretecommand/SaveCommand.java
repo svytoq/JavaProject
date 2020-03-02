@@ -1,12 +1,14 @@
 package lab5.businesslogic.concretecommand;
 
 import lab5.businesslogic.Command;
+import lab5.businesslogic.FileManager;
+import lab5.businesslogic.Manager;
 import lab5.businesslogic.Reciver;
 
 public class SaveCommand implements Command {
-    Reciver reciver;
+    FileManager reciver;
 
-    public SaveCommand(Reciver reciver){
+    public SaveCommand(FileManager reciver){
         this.reciver = reciver;
     }
     @Override
